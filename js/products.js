@@ -11,11 +11,9 @@ console.log(codeInURL);
 //producto=camiseta&color=azul&talla=s
 function addOne(num) {
   let inputQty = document.getElementById(num);
-  console.log(num.value);
   if (inputQty.value < 10) {
     inputQty.value++;
     inputQty.placeholder = inputQty.value;
-    console.log(typeof inputQty.value, inputQty.value);
   } else {
     Swal.fire({
       title: 'Please, select a number between 0 and 10'
@@ -28,7 +26,6 @@ function minusOne(num) {
   if (inputQty.value > 0) {
     inputQty.value--;
     inputQty.placeholder = inputQty.value;
-    console.log(typeof inputQty.value, inputQty.value);
   } else {
     null;
   }
@@ -46,13 +43,9 @@ function addToCart(product) {
   let showCartButton = '<div class="show-cart"><button type="button" class="btn btn-outline-primary" onclick="showCart()"><img id="showCartIco" src="./images/Shopping_cart_font_awesome.png" alt="cart"><br>Show cart</button></div>';
   document.getElementById('showCartButton').innerHTML = showCartButton;
 
-  console.log('CART: ' + cart);
-  console.log('PRODUCT: ' + product);
   // Pick data from the DOM
   let inputQty = document.getElementById(product).value;
   let price = document.getElementById('price_' + product).innerText;
-  console.log('Cantidad: ' + inputQty + ' / ID product: ' + product + ' / Price: ' + price);
-
   // Check if the quantity is in the range and it's not a NaN
   if (inputQty < 0 || inputQty > 10) {
     inputQty = "0";
@@ -65,18 +58,15 @@ function addToCart(product) {
   // Add the product and qty to the cart
   if (cart[product] !== undefined) {
     cart[product].Quantity = inputQty;
-    console.log(JSON.stringify(cart));
   } else {
     Object.assign(cart, { [product]: { Quantity: inputQty,
       Price: price
     } });
-    console.log(JSON.stringify(cart));
   }
 
   // Show the qty added to the cart:
   let message = document.getElementById('message' + '_' + product);
   message.innerHTML = 'You have ' + cart[product].Quantity + ' in your cart.';
-  console.log('CART: ' + JSON.stringify(cart));
 
   // If the qty is 0 delete the message
   // &nbsp; is neccesary to not collapse the structure.

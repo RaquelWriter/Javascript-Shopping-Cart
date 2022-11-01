@@ -3,6 +3,8 @@ let cart =
 
 }
 /* 
+STRUCTURE FOR THE CART DATA:
+
 let cart =
 {
   "id234": {
