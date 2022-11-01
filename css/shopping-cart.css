@@ -1,0 +1,139 @@
+body {
+  background-color: black;
+  background-image: url(../images/background_abstract/1.jpg);
+  background-repeat: no-repeat;
+}
+h2 {
+  font-family: 'Black Ops One', 'Arial', Arial, sans-serif;
+  margin-top: 2rem;
+  color: lightcoral;
+}
+.logoTitle {
+  background-color: black;
+  border-radius: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  /* Center the div in the center of the screen */
+  margin: 0 auto;
+  text-align: center;
+}
+.col {
+  margin: 0 auto 2vh auto;
+}
+.card-img-top {
+  border-radius: 20px;
+  max-width: 300px;
+}
+.card {
+  border-radius: 20px;
+  width: 18rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn {
+  background-color: #f5e05a;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.btn:hover {
+  background-color: #5aaaf5;
+  color: white;
+  font-weight: bold;
+}
+#result {
+  font-weight: bold;
+  font-size: 2rem;
+}
+#cart {
+  width: 15%;
+}
+#price {
+  font-weight: bold;
+  color: goldenrod;
+  font-size: 1.5rem;
+}
+.btn-link {
+  background-color: white;
+  border-style: none;
+  text-decoration: none;
+  color: lightseagreen;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.btn-link:hover,
+a:hover {
+  text-decoration: none;
+  color: lightcoral;
+}
+.input-red {
+  border-color: #ff0000;
+}
+.messageQtyCart {
+  color: lightcoral;
+  font-weight: bold;
+}
+.show-cart {
+  text-align: center;
+  margin: 0 auto 2vh auto;
+  width: 8rem;
+}
+.show-cart .btn {
+  background-color: lightcoral;
+}
+.show-cart .btn:hover {
+  background-color: #80bcf0;
+  color: white;
+}
+#showCartIco {
+  width: 40%;
+}
+.price {
+  display: inline-block;
+}
+/*
+  Solution for using type number with min and max values in DOM
+  and avoid the arrows, preserving the small size
+*/
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#total-with-discount {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: green;
+  font-weight: strong;
+}
+#you-saved {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: rgb(222, 50, 7);
+  font-weight: strong;
+}
+#img-visa-mastercard{
+  width: 5rem;
+}
+
+@media (max-width: 700px) {
+  .show-cart {
+    position: fixed;
+    text-align: center;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    top: 12%;
+    left: 50%;
+    z-index: 100;
+  }
+}
