@@ -7,7 +7,7 @@ Raquel S. Ventero.
 
 Start with shopping-cart.html
 
-## Files
+## FILES
 
 ### shopping-cart.html
 
