@@ -1,6 +1,7 @@
 # Javascript-Shopping-Cart
 
-Javascript demo for a Shopping Cart.
+Javascript demo for a Shopping Cart by
+Raquel S. Ventero.
 
 ## INSTRUCTIONS
 
