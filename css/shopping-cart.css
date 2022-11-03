@@ -131,6 +131,12 @@ input[type='number']::-webkit-outer-spin-button {
 #img-visa-mastercard{
   width: 5rem;
 }
+#countdown{
+  font-size: 2rem;
+  background-color: #80bcf0;
+  border-radius: 20px;
+  color: white;
+}
 
 @media (max-width: 700px) {
   .show-cart {
