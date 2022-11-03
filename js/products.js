@@ -99,7 +99,7 @@ function showCart(){
   totalWithDiscount = total - parseFloat(total * coupons[codeInURL].Discount).toFixed(2);
   swalHTML += ('<p>Coupon applied: ' + codeInURL + '<br>Discount: ' + coupons[codeInURL]['Discount']* 100 + '%</p>');
   swalHTML += ('<p>Ammount due:<br><del>' + total + '</del> <div id="total-with-discount">' + totalWithDiscount + ' €</div></p>');
-  swalHTML += ('<p>IVA (15%): ' + IVA + '</p>');
+  swalHTML += ('<p>IVA (15%): ' + IVA + ' €</p>');
   swalHTML += ('<div id="you-saved">You save: ' + parseFloat(total - totalWithDiscount).toFixed(2) + ' €</div>');
   swalHTML += ('<div><p>(CHECKOUT) <img id ="img-visa-mastercard" src="./images/visa-mastercard.jpg" alt="visa-mastercard" /></p></div>');
   Swal.fire({
