@@ -40,7 +40,7 @@ function handleInput() {
   let inputPromotionCode = document.getElementById('inputPromotionCode');
   if (inputPromotionCode.value === '') {
     Swal.fire({
-      title: 'Please, type a valid promotion code',
+      title: 'Please, select your promotion code',
       timer: 2000,
     });
 
