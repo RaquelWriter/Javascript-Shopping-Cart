@@ -4,11 +4,6 @@
 // GLOBALS
 // coupons from data/coupons.js
 
-// Stackoverflow
-// use it like: writeCookie("mycookie", "1", 30)
-// this will set a cookie for 30 days since now
-
-
 function showUserCodes() {
   let swalHtml = '';
   for (let code in coupons) {
@@ -45,12 +40,12 @@ function handleInput() {
   let inputPromotionCode = document.getElementById('inputPromotionCode');
   if (inputPromotionCode.value === '') {
     Swal.fire({
-      title: 'Please, type a promotion code',
+      title: 'Please, type a valid promotion code',
       timer: 2000,
     });
 
     inputPromotionCode.classList.add('input-red');
-    inputPromotionCode.placeholder = '👉 Type your code 👈';
+    inputPromotionCode.placeholder = '👇 Select your code 👇';
   } else {
     showProducts(inputPromotionCode.value);
   }
