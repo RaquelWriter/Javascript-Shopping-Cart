@@ -47,7 +47,7 @@ function addToCart(product) {
   let inputQty = document.getElementById(product).value;
   let price = document.getElementById('price_' + product).innerText;
   // Check if the quantity is in the range and it's not a NaN
-  if (inputQty < 0 || inputQty > 10) {
+  if (inputQty < 0 || inputQty > 15) {
     inputQty = "0";
     Swal.fire({
       title: 'Please, select a number between 0 and 10'
