@@ -11,7 +11,7 @@ const coupons =
     "Products": "speakers"
   },
   "709GS9DH": {
-    "Description": "Get an amazing 20% off on selected headphones!",
+    "Description": "Get an amazing 50% off on selected headphones!",
     "Discount": 0.5,
     "Products": "headphones"
   }
