@@ -94,19 +94,19 @@ function showCart(){
     discount = parseFloat(cart[item].Discount);
     swalHTML += (imgItem + '<br>Quantity: ' + cart[item].Quantity + '<br>Price/U: ' + cart[item].Price + ' €<br>');
   }
-  let IVA = total * 0.15;
+  let IVA = total * 0.21;
   console.log(IVA);
 
   if (countDownFinished){
     swalHTML += ('<p>Ammount due:<br>' + parseFloat(total).toFixed(2) + ' €</p>');
-    swalHTML += ('<p>IVA (15%): ' + IVA + ' €</p>');
+    swalHTML += ('<p>IVA (21%): ' + parseFloat(IVA).toFixed(2) + ' €</p>');
     swalHTML += ('<div><p>(CHECKOUT) <img id ="img-visa-mastercard" src="./images/visa-mastercard.jpg" alt="visa-mastercard" /></p></div>');
   
   } else{
     totalWithDiscount = total - parseFloat(total * coupons[codeInURL].Discount).toFixed(2);
     swalHTML += ('<p>Coupon applied: ' + codeInURL + '<br>Discount: ' + coupons[codeInURL]['Discount']* 100 + '%</p>');
     swalHTML += ('<p>Ammount due:<br><del>' + total + '</del> <div id="total-with-discount">' + totalWithDiscount + ' €</div></p>');
-    swalHTML += ('<p>IVA (15%): ' + parseFloat(IVA).toFixed(2) + ' €</p>');
+    swalHTML += ('<p>IVA (21%): ' + parseFloat(IVA).toFixed(2) + ' €</p>');
     swalHTML += ('<div id="you-saved">You save: ' + parseFloat(total - totalWithDiscount).toFixed(2) + ' €</div>');
     swalHTML += ('<div><p>(CHECKOUT) <img id ="img-visa-mastercard" src="./images/visa-mastercard.jpg" alt="visa-mastercard" /></p></div>');
   }
